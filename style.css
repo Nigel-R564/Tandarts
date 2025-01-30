@@ -336,17 +336,19 @@ section{
    color:var(--black);
 }
 
+
 .footer .box-container .box ul{
    font-size: 1.5rem;
    color:var(--light-color);
    text-transform: none;
    list-style: none;
 }
-    .footer .box-container .box p {
-        font-size: 1.5rem;
-        color: var(--black);
-        text-transform: none;
-    }
+
+.footer .box-container .box p {    
+font-size: 1.5rem;
+color: var(--black);        
+text-transform: none;
+}
 
 .footer .credit{
    text-align: center;

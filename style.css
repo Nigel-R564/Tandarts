@@ -45,7 +45,7 @@ section{
 
 .heading{
    text-align: center;
-   font-size: 4rem;
+   font-size: 6rem;
    color:var(--black);
    text-transform: uppercase;
    font-weight: bolder;
@@ -56,14 +56,14 @@ section{
    display: inline-block;
    padding:1rem 3rem;
    border-radius: .5rem;
-   background-color: var(--blue);
+   background-color: var(--black);
    cursor: pointer;
    font-size: 1.7rem;
    color:var(--white);
 }
 
 .link-btn:hover{
-   background-color: var(--black);
+   background-color: var(--blue);
    color:var(--white);
 }
 
@@ -79,7 +79,7 @@ section{
 }
 
 .header .logo{
-   font-size: 2rem;
+   font-size: 3rem;
    color:var(--black);
 }
 
@@ -89,7 +89,7 @@ section{
 
 .header .nav a{
    margin:0 1rem;
-   font-size: 1.7rem;
+   font-size: 1.9rem;
    color:var(--black);
 }
 
@@ -123,27 +123,27 @@ section{
 
 .home .content p{
    line-height: 2;
-   font-size: 1.5rem;
-   color:var(--light-color);
+   font-size: 2rem;
+   color:var(--blue);
    padding:1rem 0;
 }
 
-.about .row{
+.over_ons .row{
    min-height: 50vh;
 }
 
-.about .content span{
-   font-size: 2rem;
-   color:var(--blue);
+.over_ons .content span{
+   font-size: 3rem;
+   color:var(--black);
 }
 
-.about .content h3{
+.over_ons .content h3{
    font-size: 3rem;
    color:var(--black);
    margin-top: 1rem;
 }
 
-.about .content p{
+.over_ons .content p{
    padding:1rem 0;
    font-size: 1.4rem;
    color:var(--light-color);
@@ -330,17 +330,23 @@ section{
    color:var(--white);
 }
 
-.footer .box-container .box h3{
+.footer .box-container .box h3 {
    font-size: 2rem;
    margin:2rem 0;
    color:var(--black);
 }
 
-.footer .box-container .box p{
+.footer .box-container .box ul{
    font-size: 1.5rem;
    color:var(--light-color);
    text-transform: none;
+   list-style: none;
 }
+    .footer .box-container .box p {
+        font-size: 1.5rem;
+        color: var(--black);
+        text-transform: none;
+    }
 
 .footer .credit{
    text-align: center;

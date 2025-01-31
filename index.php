@@ -9,21 +9,21 @@ if(isset($_POST['submit'])){
    $name = filter_var($name, FILTER_SANITIZE_STRING);
    $email = $_POST['email'];
    $email = filter_var($email, FILTER_SANITIZE_STRING);
-   $number = $_POST['number'];
+   $number = $_POST['nummer'];
    $number = filter_var($number, FILTER_SANITIZE_STRING);
    $date = $_POST['date'];
    $date = filter_var($date, FILTER_SANITIZE_STRING);
    $date = strtotime($date);
    $new_date = date('d/m/Y', $date);
 
-   $verify_contact = $conn->prepare("SELECT * FROM `messages` WHERE name = ? AND email = ? AND number = ?");
+   $verify_contact = $conn->prepare("SELECT * FROM `messages` WHERE name = ? AND email = ? AND nummer = ?");
    $verify_contact->execute([$name, $email, $number]);
 
    if($verify_contact->rowCount() > 0){
       $warning_msg[] = 'Appointment sent already!';
    }else{
-      $insert_contact = $conn->prepare("INSERT INTO `messages`(id, name, email, number, date) VALUES(?,?,?,?,?)");
-      $insert_contact->execute([$id, $name, $email, $number, $new_date]);
+      $insert_contact = $conn->prepare("INSERT INTO `messages`(id, name, email, nummer, date) VALUES(?,?,?,?,?)");
+      $insert_contact->execute([$id, $name, $email, $nummer, $new_date]);
       $success_msg[] = 'Appointment Sent Successfully!';
    }
 

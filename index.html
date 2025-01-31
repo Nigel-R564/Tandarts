@@ -239,15 +239,15 @@
 
    <h1 class="heading">Maak een afspraak</h1>
 
-   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+   <form action="contactendpoint.php" method="post">
       <span>Naam:</span>
-      <input type="text" name="name" placeholder="Wat is uw naam?" class="box" required>
+      <input type="text" name="naam" placeholder="Wat is uw naam?" class="box" required>
       <span>Email:</span>
       <input type="email" name="email" placeholder="Wat is uw email?" class="box" required>
       <span>Telefoonnummer:</span>
-      <input type="number" name="number" placeholder="Wat is uw telefoonnummer?" class="box" required>
+      <input type="number" name="telefoonnummer" placeholder="Wat is uw telefoonnummer?" class="box" required>
       <span>afspraaksdatum:</span>
-      <input type="date" name="date" class="box" required>
+      <input type="date" name="afspraaksdatum" class="box" required>
       <input type="submit" value="Maak een afspraak!" name="submit" class="link-btn">
    </form>  
 
@@ -298,7 +298,7 @@
 
    </div>
 
-   <div class="credit"> &copy; copyright @ <?php echo date('Y'); ?> by <span>Tofigh Heydari & Nigel Rijnschot.</span>  </div>
+   <div class="credit"> &copy;  <?php echo date('Y'); ?> by <span>Tofigh Heydari & Nigel Rijnschot.</span>  </div>
 
 </section>
 

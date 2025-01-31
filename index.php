@@ -5,25 +5,25 @@ include 'components/connect.php';
 if(isset($_POST['submit'])){
 
    $id = create_unique_id();
-   $name = $_POST['name'];
+   $naam = $_POST['naam'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
    $email = $_POST['email'];
    $email = filter_var($email, FILTER_SANITIZE_STRING);
-   $number = $_POST['nummer'];
+   $nummer = $_POST['nummer'];
    $number = filter_var($number, FILTER_SANITIZE_STRING);
    $date = $_POST['date'];
    $date = filter_var($date, FILTER_SANITIZE_STRING);
    $date = strtotime($date);
    $new_date = date('d/m/Y', $date);
 
-   $verify_contact = $conn->prepare("SELECT * FROM `messages` WHERE name = ? AND email = ? AND nummer = ?");
-   $verify_contact->execute([$name, $email, $number]);
+   $verify_contact = $conn->prepare("SELECT * FROM `messages` WHERE naam = ? AND email = ? AND nummer = ?");
+   $verify_contact->execute([$naam, $email, $nummer]);
 
    if($verify_contact->rowCount() > 0){
       $warning_msg[] = 'Appointment sent already!';
    }else{
-      $insert_contact = $conn->prepare("INSERT INTO `messages`(id, name, email, nummer, date) VALUES(?,?,?,?,?)");
-      $insert_contact->execute([$id, $name, $email, $nummer, $new_date]);
+      $insert_contact = $conn->prepare("INSERT INTO `messages`(id, naam, email, nummer, date) VALUES(?,?,?,?,?)");
+      $insert_contact->execute([$id, $naam, $email, $nummer, $new_date]);
       $success_msg[] = 'Appointment Sent Successfully!';
    }
 

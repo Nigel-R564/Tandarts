@@ -330,7 +330,7 @@ if(isset($_POST['submit'])){
 
    </div>
 
-   <div class="credit">  <?php echo date('Y'); ?> by <span>Tofigh Heydari & Nigel Rijnschot</span>  </div>
+   <div class="credit">  <?php echo date('Y'); ?> van <span>Tofigh Heydari & Nigel Rijnschot</span>  </div>
 
 </section>
 
